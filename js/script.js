@@ -102,6 +102,13 @@ myButton.addEventListener('click', function() {
 
     let firstPrice = (inputKm.value * 0.21);
 
+    if(inputName.value === "" || inputAge.value === "" || inputKm.value === "") {
+
+        alert("Compilazione errata, ricaricare la pagina");
+
+    } else {
+
+
     if (inputAge.value < 18) {
 
         finalPrice = ((firstPrice / 100) * 80);
@@ -152,4 +159,4 @@ myButton.addEventListener('click', function() {
         document.getElementById('offer').innerHTML = offers
 
     }
-} )
+}} )
