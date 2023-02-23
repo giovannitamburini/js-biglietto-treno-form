@@ -55,6 +55,11 @@ let myButton = document.getElementById("userButton");
 let firstPrice;
 let finalPrice;
 
+/*-------------------------
+MILESTONE 1
+-------------------------*/
+
+
 //aggiungo un evento click
 myButton.addEventListener('click', function() {
 
@@ -86,5 +91,40 @@ myButton.addEventListener('click', function() {
 } )
 
 
+/*-------------------------
+MILESTONE 2
+-------------------------*/
 
+//aggiungo un evento click
+myButton.addEventListener('click', function() {
 
+    let firstPrice = (inputKm.value * 0.21);
+
+    if (inputAge.value < 18) {
+
+        finalPrice = ((firstPrice / 100) * 80);
+
+        document.writeln(`prezzo intero del biglietto: ${firstPrice.toFixed(2)}. <br>
+        per gli under 18 è previsto uno sconto del 20%. <br>
+        prezzo finale del biglietto: ${finalPrice.toFixed(2)}
+        `)
+
+    } else if (inputAge.value < 65) {
+
+        finalPrice = firstPrice;
+
+        document.writeln(`prezzo intero del biglietto: ${firstPrice.toFixed(2)}. <br>
+        per gli under 65 non è previsto uno sconto. <br>
+        prezzo finale del biglietto: ${finalPrice.toFixed(2)}.
+        `)
+
+    } else {
+
+        finalPrice = ((firstPrice / 100) * 60);
+
+        document.writeln(`prezzo intero del biglietto: ${firstPrice.toFixed(2)}. <br>
+        per gli over 65 è previsto uno sconto pari al 40%. <br>
+        prezzo finale del biglietto: ${finalPrice.toFixed(2)}.
+        `)
+    }
+} )
