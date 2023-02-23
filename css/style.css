@@ -56,3 +56,52 @@ h1 {
     width: 90%;
     height: 20px;
 }
+
+
+#containerTicket {
+    text-align: center;
+    display: none;
+}
+
+#containerTicket h2 {
+    padding: 20px;
+    font-size: 2em;
+}
+
+
+#outputs {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    background-color: green;
+    border-radius: 50px;
+    border: 2px solid black;
+    min-height: 100px;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 1.5em;
+}
+
+#outputs #container-passenger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 30%;
+}
+
+#outputs #trip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+}
+
+#outputs #trip table {
+    width: 100%;
+}
+
+#outputs #trip table tr {
+    height: 50px;
+}

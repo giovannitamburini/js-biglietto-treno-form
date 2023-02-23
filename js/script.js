@@ -44,7 +44,7 @@ ma in ogni caso cercate di farla vostra.
   °stampa prezzo del biglietto con sconto del 40%.
 
 */
-
+let inputName = document.getElementById("userName")
 
 let inputAge = document.getElementById("userAge");
 
@@ -95,6 +95,8 @@ myButton.addEventListener('click', function() {
 MILESTONE 2
 -------------------------*/
 
+let offers;
+
 //aggiungo un evento click
 myButton.addEventListener('click', function() {
 
@@ -104,27 +106,50 @@ myButton.addEventListener('click', function() {
 
         finalPrice = ((firstPrice / 100) * 80);
 
+        let offers = ('minore')
+
+        /*
         document.writeln(`prezzo intero del biglietto: ${firstPrice.toFixed(2)}. <br>
         per gli under 18 è previsto uno sconto del 20%. <br>
         prezzo finale del biglietto: ${finalPrice.toFixed(2)}
         `)
+        */
+       document.getElementById('containerTicket').style.display = 'block';
+       document.getElementById('passanger').innerHTML = inputName.value
+       document.getElementById('price').innerHTML = finalPrice.toFixed(2)
+       document.getElementById('offer').innerHTML = offers
 
     } else if (inputAge.value < 65) {
 
         finalPrice = firstPrice;
 
-        document.writeln(`prezzo intero del biglietto: ${firstPrice.toFixed(2)}. <br>
+        let offers = ('regolare')
+
+        /*document.writeln(`prezzo intero del biglietto: ${firstPrice.toFixed(2)}. <br>
         per gli under 65 non è previsto uno sconto. <br>
         prezzo finale del biglietto: ${finalPrice.toFixed(2)}.
         `)
-
+        */
+        document.getElementById('containerTicket').style.display = 'block';
+        document.getElementById('passanger').innerHTML = inputName.value
+        document.getElementById('price').innerHTML = finalPrice.toFixed(2)
+        document.getElementById('offer').innerHTML = offers
     } else {
 
         finalPrice = ((firstPrice / 100) * 60);
 
+        let offers = ('over')
+
+        /*
         document.writeln(`prezzo intero del biglietto: ${firstPrice.toFixed(2)}. <br>
         per gli over 65 è previsto uno sconto pari al 40%. <br>
         prezzo finale del biglietto: ${finalPrice.toFixed(2)}.
         `)
+        */
+        document.getElementById('containerTicket').style.display = 'block';
+        document.getElementById('passanger').innerHTML = inputName.value
+        document.getElementById('price').innerHTML = finalPrice.toFixed(2)
+        document.getElementById('offer').innerHTML = offers
+
     }
 } )

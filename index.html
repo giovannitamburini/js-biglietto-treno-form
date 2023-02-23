@@ -20,7 +20,7 @@
         <div id="Inputs">
             <div class="containerI">
                 <h3>Nome e Cognome</h3>
-                <input type="text" placeholder="Nome e Cognome">
+                <input type="text" id="userName" placeholder="Nome e Cognome">
             </div>
             <div class="containerI">
                 <h3>Età</h3>
@@ -37,11 +37,35 @@
     </div>
 
     <div id="containerTicket">
+        <h2>Il tuo biglietto</h2>
+        <div id="outputs">
+            <div id="container-passenger">
+                <h3>Nome Passeggero</h3>
+                <div id="passanger"></div>
+            </div>
+            <div id="trip">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Offerta</th>
+                            <th>Carrozza</th>
+                            <th>Codice CP</th>
+                            <th>Costo Biglietto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="offer"></td>
+                            <td>5</td>
+                            <td>9294</td>
+                            <td id="price"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
         
     </div>
-
-
-
 
     <!-- javascript -->
     <script type="text/javascript" src="js/script.js"></script>
