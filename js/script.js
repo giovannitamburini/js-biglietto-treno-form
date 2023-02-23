@@ -23,3 +23,68 @@ per il secondo milestone.
 Potete scegliere di implementare una soluzione completamente diversa oppure simile,
 ma in ogni caso cercate di farla vostra.
 */
+
+/*PSEUDO CODICE
+
+-chiedi all'utente nome e cognome tramite input e memorizza(per MILESTONE 2)
+
+-chiedi all'utente il numero di km tramite input e memorizza
+-chiedi all'utente l'età tramite input e memorizza
+
+-calcola il prezzo intermedio del biglietto senza sconti (km * 0.21)
+
+-calcola il prezzo finale del biglietto in base all'età:
+? SE l'età è inferiore a 18 anni
+  °stampa prezzo biglietto con sconto del 20%
+
+? ALTRIMENTI SE l'età è inferiore ai 65 anni
+  °stampa prezzo biglietto privo di sconto
+
+  ALTRIMENTI (cioè l'età è pari o superiore ai 65)
+  °stampa prezzo del biglietto con sconto del 40%.
+
+*/
+
+
+let inputAge = document.getElementById("userAge");
+
+let inputKm = document.getElementById('userKm');
+
+let myButton = document.getElementById("userButton");
+
+let firstPrice;
+let finalPrice;
+
+//aggiungo un evento click
+myButton.addEventListener('click', function() {
+
+    console.log(inputAge.value);
+    console.log(inputKm.value);
+
+    let firstPrice = (inputKm.value * 0.21);
+
+    console.log (firstPrice);
+
+    if (inputAge.value < 18) {
+
+        finalPrice = ((firstPrice / 100) * 80);
+
+        console.log (finalPrice.toFixed(2));
+
+    } else if (inputAge.value < 65) {
+
+        finalPrice = firstPrice;
+
+        console.log (finalPrice);
+
+    } else {
+
+        finalPrice = ((firstPrice / 100) * 60);
+
+        console.log (finalPrice);
+    }
+} )
+
+
+
+
